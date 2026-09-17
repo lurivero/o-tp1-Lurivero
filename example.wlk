@@ -3,8 +3,14 @@ object verdurin
 var cajones = 10 
 var kilometraje = 700000
 
-method pesoCargado() { cajones * 50 }
-method velocidad() { 80 - (kilometraje / 10000) }
+method pesoCargado() { return cajones * 50 }
+method velocidad() 
+{
+   return 80 - (self.pesoCargado() / 500) 
+}
+
+method kilometraje() { return kilometraje}
+
 
 }
 
