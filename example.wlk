@@ -26,10 +26,19 @@ method definirDensidad(densidadLiquido) { densidad = densidadLiquido }
 
 object cerealitas {
   var deteriodo = 0
+  var carga = 0
 
-method incrementarDeteriodo(veces) { deteriodo + veces }
-method velocidad () {if(deteriodo<10) 40 else 60} 
-method pesoCargado() {}
+method velocidad () 
+{
+  if(deteriodo<10) return 40 else return 60 - deteriodo} 
+
+method realizarViaje(cargaSolicitada) 
+{ 
+  carga = cargaSolicitada
+  deteriodo = deteriodo + 1
+ }
+
+method pesoCargado() {return carga }
 
 }
 
