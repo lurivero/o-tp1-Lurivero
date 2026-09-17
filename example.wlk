@@ -15,11 +15,12 @@ method kilometraje() { return kilometraje}
 }
 
 object scanion5000 {
-  const combustible = 5000
+  const liquido = 5000
+  var densidad = 0
 
-method pesoCargado() { }
-method velocidad() { 140 }
-
+method pesoCargado() { return liquido * densidad}
+method velocidad() { return 140 }
+method definirDensidad(densidadLiquido) { densidad = densidadLiquido }
 }
 
 
